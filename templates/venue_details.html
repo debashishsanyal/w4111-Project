@@ -1,0 +1,81 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+    <p><a href="/">Logout and go to the main page</a></p>
+    <p><a href = "/return_logged_in?name={{name}}&uid={{uid}}">Go to the your page</a></p>
+    
+    <h3>Venue details: </h3>
+    {% for n in data %}
+    <p>Journal Title: {{n[4]}}</p>
+    <p>Conference Title: {{n[5]}}</p>
+    <p>Fields: {{n[1]}}</p>
+    <p>Location: {{n[6]}}</p>
+    <p>Sponsor: {{n[7]}}</p>
+    
+    {% for n in venuetype %}
+    <h2>People visiting/publishing in this {{n[0]}} are :</h2><br>
+    {% endfor %}
+    <table>
+      <thead>
+        {% for n in colnames_visitors %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th> </tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in visitors %}
+        <tr><td><a href = "/user_details?id={{n[1]}}&name={{name}}&uid={{uid}}">{{n[5]}}</a> </td><td> {{n[7]}} </td> <td> {{n[8]}} </td> </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+    
+    <h5>Total number of people visiting this conference: {{total_visitors}}</h5>
+    
+    {% for n in venuetype %}
+    <h2>All the published articles in this {{n[0]}} are :</h2><br>
+     {% endfor %}
+    <table>
+      <thead>
+        {% for n in colnames_publications %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th> </tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in publications %}
+        <tr><td><a href = "/publication_details?id={{n[3]}}&name={{name}}&uid={{uid}}">{{n[1]}}</a> </td><td> {{n[5]}} </td> <td> {{n[4]}} </td> </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+
+    <h5>Total number of articles published: {{total_articles}}</h5>
+    
+    
+  <!--  <h2>{{cited_head}}</h2><br>
+    <table>
+      <thead>
+        {% for n in colnames_cited %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th> <th> {{n[3]}} </th></tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in i_cited %}
+        <tr><td><a href = "/userdetails?id={{n[0]}}">{{n[1]}}</a> </td><td> {{n[2]}} </td> <td> {{n[3]}} </td> <td> {{n[4]}} </td> </tr>
+        {% endfor %}
+      </tbody>
+  </table> 
+    
+    
+    <h5>Total number of people cited by the user: {{total_cited}}</h5>
+    {% endfor %}-->
+    
+
+</body>
+
+
+</html>

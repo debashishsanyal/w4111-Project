@@ -1,0 +1,43 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+<p><a href="/">Go to the main page</a></p>
+
+
+<!-- <form method="POST" action="/findname">
+<p>Find user details by name: <input type="text" name="name"> <input type="submit" value="Find user"></p>
+</form> -->
+<h1>{{message}} </h1>
+<form method="POST" action="/check_login">
+    <p>Enter login details: </p> <br>
+      <label for="name">Enter username:</label>
+      <input type="text" id="name" name="username" placeholder="debashish" autofocus required> <br>
+
+      <label for="password">Enter password:</label>
+      <input type="text" id= "password"name = "password" placeholder="a" required><br>
+       
+      <input type="submit" value="login">
+      <!-- <input  type="submit" name="theage "value="Send!"> -->
+</form>
+
+    <h4>Users currently in the database are: </h4>
+<div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div>
+<h1>{{added_message}} </h1>
+
+
+</body>
+
+
+</html>

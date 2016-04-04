@@ -1,0 +1,17 @@
+0,Software architecture,0.1,Conference,NULL,QoSA 15,"Montreal, Canada",None
+1,Software Engineering,0.7,Conference,NULL,ICSE 16,"Austin, USA",IEEE Computer Society
+2,Signal Processing,1.532,Journal,Digital Signal Processing,NULL,NULL,NULL
+3,Evolutionary Computation,3.654,Journal,IEEE Transactions on Evolutionary Computation,NULL,NULL,NULL
+4,Fuzzy Logic,8.746,Journal,IEEE Transactions on Fuzzy Systems,NULL,NULL,NULL
+5,Engineering,2.534,Journal,Expert Systems with applications,NULL,NULL,NULL
+6,Computer Architecture,0.8,Conference,NULL,Comparch 15,"Montreal, Canada","IEEE Computer Society, Sigsoft"
+7,Machine Learning,1.2,Conference,NULL,ICML 16,"New York, USA","Adobe, Facebook"
+8,Machine Learning,1.3,Conference,NULL,KDD 16,"San Francisco, USA","Microsoft, Linkedin, Adobe"
+9,Machine Learning,1.4,Conference,NULL,NIPS 15,"Montreal, Canada","Google, Microsoft, Amazon"
+10,Computing,0.7,Conference,NULL,IACC 2009,"Patiala, India",IEEE
+11,Software Engineering,1.614,Journal,IEEE Transactions on Software Engineering,NULL,NULL,NULL
+12,Software Engineering,0.7,Conference,NULL,ICSE 87,"California, USA",IEEE Computer Society
+13,Mobile Computing,2.543,Journal,IEEE Transactions on Mobile Computing,NULL,NULL,NULL
+14,Intelligent Systems,1,Journal,Advances in Intelligent Systems and Computing,NULL,NULL,NULL
+15,Machine Learning,3,Journal,Journal Of Machine Learning Research,NULL,NULL,NULL
+16,Databases,2.5,Journal,ACM Transactions on Database Systems,NULL,NULL,NULL

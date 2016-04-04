@@ -1,0 +1,129 @@
+insert into users values (0,'Academician','Machine Learning','I am a Master Student pursuing Computer Science','Apoorv Patwardhan','None','Student','Columbia University');
+insert into users values (1,'Academician','System Identification','I am a Master Student pursuing Electrical Engineering','Rohan Patidar','None','Student','University of Washington');
+insert into users values (3,'Academician','Artificial Intelligence','I am a Ph.D candidate in Chemical Engineering','Matthew Conway','None','Student','Columbia University');
+insert into users values (4,'Company_RS','Databases, Systems','I am a Professor for W4111: Intro. to Databases','Evan Jones','None','Software Engineer','Twitter');
+insert into users values (5,'Academician','Database, Human Computation','I am a Professor for W4111: Intro. to Databases','Eugene Wu','None','Professor','Columbia University');
+insert into users values (6,'Academician','Databases, Information Retrieval','I am a Professor for W4111: Intro. to Databases','Luis Gravano','None','Professor','Columbia University');
+insert into users values (7,'Company_RS','Machine Learning','I work at Baidu','Andrew N G','None','Chief Research Scientist','Baidu');
+insert into users values (8,'Academician','Machine Learning','I am a Master Student pursuing Computer Science','Debashish Sanyal','None','Student','Columbia University');
+insert into users values (9,'Academician','Software','I am a Professor for Topics in Software Engineering','Gail Kaiser','None','Professor','Columbia University');
+insert into users values (10,'Academician','Active Noise Control','I am a Professor','Nithin George','None','Professor','Indian Institute of Technology, Gandhinagar');
+insert into users values (11,'Academician','Requirements Engineering','I am a Professor','Anne Koziolek','None','Professor','Karlsruhe Institute of Technology');
+insert into users values (12,'Company_RS','Artificial Intelligence','I am a company research scientist at NVIDIA','Sharan Chetlur','None','Research Scientist','NVIDIA');
+insert into users values (13,'Academician','Artificial Intelligence','I am a Professor','Dzmitry Bahdanau','None','Professor','University of Montreal');
+insert into users values (14,'Academician','Probabilistic Graphical Models','I am a Ph.D. student at Department of Computer Science and Operations Research','Dmitriy Serdyuk','None','Student','University of Montreal');
+insert into users values (15,'Academician','latent variable models','I am an assistant professor','Tapani Raiko','None ','Assistant Professor','Aalto University');
+insert into users values (16,'Academician','speech recognition','I am an assistant research professor','Florian Metze','None','Assistant Research Professor','Carnegie Mellon University');
+
+
+insert into publications values ('On a cuckoo search optimization approach towards feedback system identification',12,0,'Evolutionary Algorithms, Active Noise Control','10.1016/j.dsp.2014.05.008','Research article',NULL,NULL,NULL);
+insert into publications values ('An improved S-transform for time-frequency analysis',27,1,'Electrical Engineering','10.1109/IADCC.2009.4809028','Research article',NULL,NULL,NULL);
+insert into publications values ('An information retrieval approach for automatically constructing software libraries',520,2,'Software','10.1109/32.83915','Research article',NULL,NULL,NULL);
+insert into publications values ('An architecture for intelligent assistance in software development',123,3,'Software','0-89791-216-0','Research article',NULL,NULL,NULL);
+insert into publications values ('Practical routing in delay tolerant networks',0,4,'Mobile Computing','10.1109/TMC.2007.1016','Research article',NULL,NULL,NULL);
+insert into publications values ('Automated improvement of software architecture models for performance and other quality attributes',13,5,'Software architecture optimization','978-3-86644-973-2','Thesis','Ralf Reussner',NULL,NULL);
+insert into publications values ('A levy interior search algorithm for chaotic system identification',0,6,'System Identification','10.1007/978-3-319-19824-8_11','Research article',NULL,NULL,NULL);
+insert into publications values ('Latent Dirichlet Allocation',13713,7,'Machine Learning','1532-4435','Research article',NULL,NULL,NULL);
+insert into publications values ('Top-k selection queries over relational databases: Mapping strategies and performance evaluation',299,8,'Databases','10.1145/568518.568519','Research article',NULL,NULL,NULL);
+insert into publications values ('Method of building multidimensional workload-aware histograms',15,9,'Databases','','Patent',NULL,'US','US7007039 B2');
+
+
+insert into venues values (0,'Software architecture','0.1','Conference',NULL,'QoSA 15','Montreal, Canada','None');
+insert into venues values (1,'Software Engineering','0.7','Conference',NULL,'ICSE 16','Austin, USA','IEEE Computer Society');
+insert into venues values (2,'Signal Processing','1.532','Journal','Digital Signal Processing',NULL,NULL,NULL);
+insert into venues values (3,'Evolutionary Computation','3.654','Journal','IEEE Transactions on Evolutionary Computation',NULL,NULL,NULL);
+insert into venues values (4,'Fuzzy Logic','8.746','Journal','IEEE Transactions on Fuzzy Systems',NULL,NULL,NULL);
+insert into venues values (5,'Engineering','2.534','Journal','Expert Systems with applications',NULL,NULL,NULL);
+insert into venues values (6,'Computer Architecture','0.8','Conference',NULL,'Comparch 15','Montreal, Canada','IEEE Computer Society, Sigsoft');
+insert into venues values (7,'Machine Learning','1.2','Conference',NULL,'ICML 16','New York, USA','Adobe, Facebook');
+insert into venues values (8,'Machine Learning','1.3','Conference',NULL,'KDD 16','San Francisco, USA','Microsoft, Linkedin, Adobe');
+insert into venues values (9,'Machine Learning','1.4','Conference',NULL,'NIPS 15','Montreal, Canada','Google, Microsoft, Amazon');
+insert into venues values (10,'Computing','0.7','Conference',NULL,'IACC 2009','Patiala, India','IEEE');
+insert into venues values (11,'Software Engineering','1.614','Journal','IEEE Transactions on Software Engineering',NULL,NULL,NULL);
+insert into venues values (12,'Software Engineering','0.7','Conference',NULL,'ICSE 87','California, USA','IEEE Computer Society');
+insert into venues values (13,'Mobile Computing','2.543','Journal','IEEE Transactions on Mobile Computing',NULL,NULL,NULL);
+insert into venues values (14,'Intelligent Systems',1,'Journal','Advances in Intelligent Systems and Computing',NULL,NULL,NULL);
+insert into venues values (15,'Machine Learning',3,'Journal','Journal Of Machine Learning Research',NULL,NULL,NULL);
+insert into venues values (16,'Databases','2.5','Journal','ACM Transactions on Database Systems',NULL,NULL,NULL);
+
+
+insert into Published values (0,0,'Research article');
+insert into Published values (10,1,'Research article');
+insert into Published values (9,2,'Research article');
+insert into Published values (9,3,'Research article');
+insert into Published values (4,4,'Research article');
+insert into Published values (11,5,'Thesis');
+insert into Published values (1,6,'Research article');
+insert into Published values (7,7,'Research article');
+insert into Published values (6,8,'Research article');
+insert into Published values (6,9,'Patent');
+insert into Published values (10,6,'Research article');
+
+
+insert into Published_or_Presented_at values (2,'Journal',0,'Research article');
+insert into Published_or_Presented_at values (10,'Conference',1,'Research article');
+insert into Published_or_Presented_at values (11,'Journal',2,'Research article');
+insert into Published_or_Presented_at values (12,'Conference',3,'Research article');
+insert into Published_or_Presented_at values (13,'Journal',4,'Research article');
+insert into Published_or_Presented_at values (14,'Journal',6,'Research article');
+insert into Published_or_Presented_at values (15,'Journal',7,'Research article');
+insert into Published_or_Presented_at values (16,'Journal',8,'Research article');
+
+
+insert into attended_by values (7,'Conference',0);
+insert into attended_by values (8,'Conference',0);
+insert into attended_by values (9,'Conference',0);
+insert into attended_by values (0,'Conference',11);
+insert into attended_by values (1,'Conference',11);
+insert into attended_by values (6,'Conference',11);
+insert into attended_by values (1,'Conference',9);
+insert into attended_by values (6,'Conference',9);
+insert into attended_by values (12,'Conference',9);
+insert into attended_by values (7,'Conference',7);
+insert into attended_by values (9,'Conference',7);
+
+
+insert into known_contributors values (2,'Journal',0);
+insert into known_contributors values (2,'Journal',1);
+insert into known_contributors values (5,'Journal',1);
+insert into known_contributors values (14,'Journal',1);
+insert into known_contributors values (15,'Journal',7);
+insert into known_contributors values (11,'Journal',9);
+insert into known_contributors values (2,'Journal',10);
+insert into known_contributors values (5,'Journal',10);
+insert into known_contributors values (14,'Journal',10);
+insert into known_contributors values (11,'Journal',11);
+insert into known_contributors values (16,'Journal',6);
+insert into known_contributors values (13,'Journal',6);
+
+
+insert into User_cites values (1,0);
+insert into User_cites values (1,10);
+insert into User_cites values (10,0);
+insert into User_cites values (10,1);
+insert into User_cites values (4,5);
+insert into User_cites values (5,4);
+insert into User_cites values (6,4);
+insert into User_cites values (6,5);
+insert into User_cites values (11,9);
+insert into User_cites values (11,0);
+insert into User_cites values (0,11);
+insert into User_cites values (12,7);
+insert into User_cites values (13,7);
+insert into User_cites values (14,7);
+insert into User_cites values (15,7);
+insert into User_cites values (16,7);
+
+
+insert into Publication_cites values (9,8);
+insert into Publication_cites values (9,7);
+insert into Publication_cites values (9,6);
+insert into Publication_cites values (9,5);
+insert into Publication_cites values (4,3);
+insert into Publication_cites values (4,2);
+insert into Publication_cites values (4,1);
+insert into Publication_cites values (8,6);
+insert into Publication_cites values (8,5);
+insert into Publication_cites values (3,2);
+
+

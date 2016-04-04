@@ -1,0 +1,69 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+<p><a href="/">Logout and go to the main page</a></p>
+<p><a href = "/return_logged_in?name={{name}}&uid={{uid}}">Go to the your page</a></p>
+
+
+<!-- <form method="POST" action="/findname">
+<p>Find user details by name: <input type="text" name="name"> <input type="submit" value="Find user"></p>
+</form> -->
+
+<form method="POST" action="/find_venue">
+    <p>Enter any of the fields below to find the desired venue. Partially filled out form fields are OK! : </p> <br>
+      <label for="journal_title">Enter Journal Title:</label>
+      <input type="text" id="journal_title" name="journal_title" placeholder="Enter title" autofocus> <br>
+
+      <label for="conference_title">Enter Conference Title:</label>
+      <input type="text" id="conference_title" name="conference_title" placeholder="Enter title" autofocus> <br>
+       
+      <label for="location">Enter location:</label>
+      <input type="text" id="location" name = "location" placeholder="e.g. Delhi, New York"><br>
+    
+      <label for="type">Enter the type of Venue:</label>
+      <input type="text" id="type" name = "type" placeholder="Journal or Conference"><br>
+    
+      <label for="sponsor">Enter the sponsor:</label>
+      <input type="text" id="sponsor" name = "sponsor" placeholder="Infosys, Microsoft, Google"><br>
+     
+      <input type="hidden" name="uid" value="{{uid}}">
+      <input type="hidden" name="namez" value="{{name}}">
+      
+      <!-- 
+      <label for="theage">Enter age:</label>
+      <input type="text" id="age" name = "age"><br> -->
+
+      <input type="submit" value="Find Venue">
+      <!-- <input  type="submit" name="theage "value="Send!"> -->
+</form>
+
+<h1>{{headname}} </h1>
+<!-- <div>{{data}}</div> -->
+<div>
+  <table>
+      <thead>
+        {% for n in colnames %}
+		<tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th><th> {{n[3]}}</th><th> {{n[4]}}</th></tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in data %}
+        <tr><td><a href = "/venue_details?id={{n[0]}}&name={{name}}&uid={{uid}}">{{n[4]}}</a> </td><td><a href = "/venue_details?id={{n[0]}}&name={{name}}&uid={{uid}}"> {{n[5]}} </a></td> <td> {{n[6]}} </td> <td> {{n[3]}} </td> <td> {{n[7]}} </td></tr>
+        {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,59 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  
+  <h1>WELCOME {{name}} </h1>
+  <h4>{{message}} </h4>
+    
+  <!--
+  <h1>Users currently in the database are: </h1>
+  <div>{{data}}</div> 
+    
+    
+  <div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div>
+
+   -->
+
+
+
+<p><a href = "/remove_user2?id={{uid}}&name={{name}}">Click here to remove yourself from the database (WARNING: cannot undo).</a></p> 
+<p><a href = "/user_change_details?id={{uid}}&name={{name}}">Click here to change your details</a></p> <br>
+<p><a href = "/publication_add?id={{uid}}&name={{name}}">Click here to add a publication</a></p> 
+<p><a href = "/publication_remove?id={{uid}}&name={{name}}">Click here to remove one of your publications</a></p> <br>
+    
+
+<p><a href="/user_search?id={{uid}}&name={{name}}">Click here to search for a USER.</a></p>
+<p><a href="/publication_search?id={{uid}}&name={{name}}">Click here to search for a PUBLICATION.</a></p>
+<p><a href="/venue_search?id={{uid}}&name={{name}}">Click here to search for a VENUE.</a></p>
+
+<br>
+<p><a href="/">Click here to logout.</a></p>
+
+
+    
+
+    <!-- 
+<p><a href="/another">Go to the other page</a></p>
+<form method="POST" action="/add">
+<p>Name of new computer scientist: <input type="text" name="name"> <input type="submit" value="Add"></p>
+</form>
+
+<form method="POST" action="/findname">
+<p>Name of new computer scientist: <input type="text" name="name"> <input type="submit" value="Add"></p> 
+</form> -->
+
+</body>
+
+
+</html>

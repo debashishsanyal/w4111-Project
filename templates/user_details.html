@@ -1,0 +1,64 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+    <p><a href="/">Logout and go to the main page</a></p>
+    <p><a href = "/return_logged_in?name={{name}}&uid={{uid}}">Go to the your page</a></p>
+    
+    <p>Hello</p>
+    {% for n in data %}
+    <p>Name: {{n[4]}}</p>
+    <p>Organization: {{n[7]}}</p>
+    <p>Title: {{n[6]}}</p>
+    <p>Research Interests: {{n[2]}}</p>
+    <p>Association: {{n[5]}}</p>
+    <p>About: {{n[3]}}</p>
+    
+    
+    <h2>{{citers_head}}</h2><br>
+    <table>
+      <thead>
+        {% for n in colnames_citers %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th> <th> {{n[3]}} </th></tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in citers %}
+        <tr><td><a href = "/user_details?id={{n[0]}}&name={{name}}&uid={{uid}}">{{n[1]}}</a> </td><td> {{n[2]}} </td> <td> {{n[3]}} </td> <td> {{n[4]}} </td> </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+    
+    <h5>Total citations (number of people who cited this user): {{total_citers}}</h5>
+    
+    
+    
+    <h2>{{cited_head}}</h2><br>
+    <table>
+      <thead>
+        {% for n in colnames_cited %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th> <th> {{n[3]}} </th></tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in i_cited %}
+        <tr><td><a href = "/user_details?id={{n[0]}}&name={{name}}&uid={{uid}}">{{n[1]}}</a> </td><td> {{n[2]}} </td> <td> {{n[3]}} </td> <td> {{n[4]}} </td> </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+    
+    
+    <h5>Total number of people cited by the user: {{total_cited}}</h5>
+    {% endfor %}
+    
+
+</body>
+
+
+</html>

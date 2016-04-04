@@ -1,0 +1,9 @@
+drop table attended_by cascade;
+drop table known_contributors cascade;
+drop table publication_cites;
+drop table publications cascade;
+drop table published cascade;
+drop table published_or_presented_at cascade;
+drop table user_cites;
+drop table users cascade;
+drop table venues cascade;

@@ -1,0 +1,73 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+<p><a href="/">Go to the main page</a></p>
+<p><a href = "/return_logged_in?name={{name}}&uid={{uid}}">Go to the your page</a></p>
+
+
+<!-- <form method="POST" action="/findname">
+<p>Find user details by name: <input type="text" name="name"> <input type="submit" value="Find user"></p>
+</form> -->
+
+<form method="POST" action="/add_publication">
+    <p>Enter the following details: </p> <br>
+      <label for="title">Enter title:</label>
+      <input type="text" id="title" name="title" placeholder="e.g. On a cuckoo search optimization approach towards feedback system identification" autofocus required> <br>
+       
+      <label for="field">Enter fields:</label>
+      <input type="text" id="field" name = "field" placeholder="e.g. Machine Learning" required><br>
+    
+      <label for="doi">Enter doi:</label>
+      <input type="text" id="doi" name = "doi" placeholder="e.g. 10.1016/j.dsp.2014.05.008" required><br><br>
+    
+      Please select ONE type from the following options:<br>
+      <input type="radio" name="type" value="Thesis">Thesis<br>
+      <input type="radio" name="type" value = "Research article">Research Article<br>
+      <input type="radio" name="type" value = "Patent">Patent<br><br>
+    
+      <label for="advisor">Enter advisor:</label>
+      <input type="text" id="advisor" name = "advisor" placeholder="especially for Thesis"><br><br>
+
+      <label for="patent_office">Enter patent office:</label>
+      <input type="text" id="patent_office" name = "patent_office" placeholder="e.g. Washington"><br><br>
+    
+      <label for="patent_no">Enter patent number:</label>
+      <input type="text" id="patent_no" name = "patent_no" placeholder="e.g. 2131ABC"><br><br>
+    
+      
+    
+    
+    
+        <br>
+        
+      <input type="hidden" name="uid" value="{{uid}}">
+      <input type="hidden" name="citations" value="0">
+    
+      <input type="hidden" name="name" value="{{name}}">
+
+        <br>
+    
+      
+      <!-- 
+      <label for="theage">Enter age:</label>
+      <input type="text" id="age" name = "age"><br> -->
+
+      <input type="submit" value="Add publication">
+      <!-- <input  type="submit" name="theage "value="Send!"> -->
+</form>
+
+<h1>{{added_message}} </h1>
+
+
+</body>
+
+
+</html>

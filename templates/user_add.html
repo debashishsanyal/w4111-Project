@@ -1,0 +1,69 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+<p><a href="/">Go to the main page</a></p>
+
+
+<!-- <form method="POST" action="/findname">
+<p>Find user details by name: <input type="text" name="name"> <input type="submit" value="Find user"></p>
+</form> -->
+
+<form method="POST" action="/add_user">
+    <p>Enter any of the fields below to find your user (even if partially): </p> <br>
+      <label for="firstname">Enter name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter name" autofocus required> <br>
+
+      <label for="organizationn">Enter organization:</label>
+      <input type="text" id= "organization"name = "organization" placeholder="Organization name" required><br>
+       
+      <label for="r_interests">Enter research interests:</label>
+      <input type="text" id="r_interests" name = "r_interests" placeholder="e.g. Machine Learning" required><br>
+    
+      <label for="the_title">Enter title:</label>
+      <input type="text" id="the_title" name = "the_title" placeholder="e.g. Student, Professor, Software Engineer etc" required><br>
+    
+      <label for="description">Enter description:</label>
+      <input type="text" id="description" name = "description" placeholder="e.g. I am a science Rockstar" required><br>
+    
+      <label for="associations">Enter associations:</label>
+      <input type="text" id="associations" name = "associations" placeholder="e.g. IEEE"><br><br>
+    
+      
+    
+      Please select ONE type from the following options:<br>
+      <input type="radio" name="type" value="Academician">Academician<br>
+      <input type="radio" name="type" value = "Company_RS">Company Research Scientist<br>
+      <input type="radio" name="type" value = "Independent_RS">Independent Research Scientist<br><br>
+        
+      
+      <h3>{{headname1}} </h3>
+      <label for="description">Enter username:</label>
+      <input type="text" id="description" name = "username" placeholder="e.g. rockstar" required><br>
+    
+      <label for="associations">Enter password:</label>
+      <input type="text" id="associations" name = "password" placeholder="e.g. catdog"><br><br>
+    
+      
+      <!-- 
+      <label for="theage">Enter age:</label>
+      <input type="text" id="age" name = "age"><br> -->
+
+      <input type="submit" value="Add user">
+      <!-- <input  type="submit" name="theage "value="Send!"> -->
+</form>
+
+<h1>{{added_message}} </h1>
+
+
+</body>
+
+
+</html>

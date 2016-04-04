@@ -1,0 +1,78 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+    <p><a href="/">Logout and go to the main page</a></p>
+    <p><a href = "/return_logged_in?name={{name}}&uid={{uid}}">Go to the your page</a></p>
+    
+    {% for n in data %}
+    <p>Title: {{n[0]}}</p>
+    <p>citations: {{n[1]}}</p>
+    <p>Field: {{n[3]}}</p>
+    <p>DOI: {{n[4]}}</p>
+    <p>Type: {{n[5]}}</p>
+    <h2> The authors of this publication are:</h2><br>
+    {% for n in author_info %}
+        <a href = "/user_details?id={{n[1]}}&name={{name}}&uid={{uid}}">{{n[5]}}</a> 
+    {% endfor %}    
+    <h2>This publication has been published/presented at the following Venue: </h2><br>
+    <table>
+      <thead>
+        {% for n in colnames_venueinfo %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th> <th> {{n[3]}}</th></tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in venue_info %}
+        <tr><td><a href = "/venue_details?id={{n[1]}}&name={{name}}&uid={{uid}}">{{n[5]}}</a> </td><td> {{n[6]}} </td> <td> {{n[7]}} </td> <td> {{n[8]}} </td></tr>
+        {% endfor %}
+      </tbody>
+  </table>
+ 
+    <h2>{{citers_head}}</h2><br>
+    <table>
+      <thead>
+        {% for n in colnames_citers %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th> </tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in citers %}
+        <tr><td><a href = "/publication_details?id={{n[5]}}&name={{name}}&uid={{uid}}">{{n[0]}}</a> </td><td> {{n[3]}} </td> <td> {{n[4]}} </td> </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+    
+    <h5>Total citations (number of publications who cited this publication): {{total_citers}}</h5>
+    
+    
+    
+    <h2>{{cited_head}}</h2><br>
+    <table>
+      <thead>
+        {% for n in colnames_cited %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th> </tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in thispub_cited %}
+        <tr><td><a href = "/publication_details?id={{n[3]}}&name={{name}}&uid={{uid}}">{{n[1]}}</a> </td><td> {{n[4]}} </td> <td> {{n[5]}} </td> </tr>
+        {% endfor %}
+      </tbody>
+  </table> 
+    
+    
+    <h5>Total number of publications cited by this publication: {{total_cited}}</h5>
+    {% endfor %}
+    
+
+</body>
+
+
+</html>

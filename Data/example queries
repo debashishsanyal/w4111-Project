@@ -1,0 +1,40 @@
+--interesting queries
+
+-- Find name of users who haven't attended a single conference
+select u.name
+from users u
+where u.uid not in(
+                    select u2.uid from
+                    users u2,attended_by a
+                    where u2.uid = a.uid
+                  );
+
+
+
+--Find number of users who haven't attended a single conference
+select count(*)
+from users u
+where u.uid not in(
+                    select u2.uid from
+                    users u2,attended_by a
+                    where u2.uid = a.uid
+                  );
+
+--Find top three users with the maximum number of citations
+select u.uid,u.name,u.total_cits
+from users u
+order by u.total_cits desc
+limit 3;
+
+
+--Find users who have published in at least one journal as well as attended at least  one conference
+
+select distinct u.name
+from users u,Published_or_Presented_at p,published p2
+where u.uid = p2.uid and p2.pid = p.pid and p.vtype = 'Journal'
+
+INTERSECT
+
+select u.name
+from users u,Published_or_Presented_at p,published p2
+where u.uid = p2.uid and p2.pid = p.pid and p.vtype = 'Conference';

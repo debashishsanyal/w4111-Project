@@ -1,0 +1,64 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+
+<p><a href="/">Logout and go to the main page</a></p>
+<p><a href = "/return_logged_in?name={{name}}&uid={{uid}}">Go to the your page</a></p>
+
+
+<!-- <form method="POST" action="/findname">
+<p>Find user details by name: <input type="text" name="name"> <input type="submit" value="Find user"></p>
+</form> -->
+
+<form method="POST" action="/find_publication">
+    <p>Enter any of the fields below to find the desired publication. Partially filled out form fields are OK! : </p> <br>
+      <label for="title">Enter Title:</label>
+      <input type="text" id="title" name="title" placeholder="Enter title" autofocus> <br>
+       
+      <label for="doi">Enter DOI identifier:</label>
+      <input type="text" id="doi" name = "doi" placeholder="e.g. 10.875.1114/2015"><br>
+    
+      <label for="type">Enter the type of Publication:</label>
+      <input type="text" id="type" name = "type" placeholder="Research article or Thesis or Patent"><br>
+     
+      <input type="hidden" name="uid" value="{{uid}}">
+      <input type="hidden" name="namez" value="{{name}}">
+    
+      
+      <!-- 
+      <label for="theage">Enter age:</label>
+      <input type="text" id="age" name = "age"><br> -->
+
+      <input type="submit" value="Find Publication">
+      <!-- <input  type="submit" name="theage "value="Send!"> -->
+</form>
+
+<h1>{{headname}} </h1>
+<!-- <div>{{data}}</div> -->
+<div>
+  <table>
+      <thead>
+        {% for n in colnames %}
+        <tr><th> {{n[0]}} </th><th> {{n[1]}} </th><th> {{n[2]}}</th></tr>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for n in data %}
+        <tr><td><a href = "/publication_details?id={{n[2]}}&name={{name}}&uid={{uid}}">{{n[0]}}</a> </td><td> {{n[4]}} </td> <td> {{n[5]}} </td> </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+
+</body>
+
+
+</html>
